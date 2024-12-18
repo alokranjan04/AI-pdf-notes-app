@@ -1,41 +1,130 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI PDF Notes App 📚
 
-## Getting Started
+An intelligent PDF management system that leverages AI to help users organize, analyze, and extract insights from their PDF documents.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 📱 Core Features
+- **PDF Management**
+  - Upload and organize PDFs
+  - Create collections and folders
+  - Real-time PDF preview
+  - Search through PDF contents
+
+- **AI-Powered Analysis**
+  - Smart text extraction
+  - Document summarization
+  - Key points identification
+  - Natural language querying
+
+- **User Management**
+  - Secure authentication with Clerk
+  - User-specific document storage
+  - Customizable preferences
+
+### ⭐ Premium Features
+- Advanced AI analysis
+- Bulk document processing
+- Enhanced storage capacity
+- Priority support
+
+## 🛠️ Technical Stack
+
+- **Frontend**: Next.js 13+ with App Router
+- **Authentication**: Clerk
+- **Database**: Convex
+- **AI Integration**: Google Gemini API
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Payments**: PayPal
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── (auth)/            # Authentication related routes
+│   ├── (dashboard)/       # Protected dashboard routes
+│   ├── api/               # API routes
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── auth/             # Authentication components
+│   ├── dashboard/        # Dashboard components
+│   ├── pdf/              # PDF handling components
+│   ├── shared/           # Shared/common components
+│   └── ui/               # UI components (shadcn)
+├── lib/                  # Utility functions and helpers
+│   ├── api/             # API related utilities
+│   ├── pdf/             # PDF processing utilities
+│   ├── ai/              # AI integration utilities
+│   └── db/              # Database utilities
+├── hooks/               # Custom React hooks
+├── types/               # TypeScript type definitions
+└── config/             # Configuration files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/alokranjan04/ai-pdf-notes-app.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Set up environment variables**
+   Create a `.env.local` file with the following:
+   ```env
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   CONVEX_DEPLOYMENT=your_convex_deployment
+   NEXT_PUBLIC_CONVEX_URL=your_convex_url
+   NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key
+   NEXT_PUBLIC_PAYPAL_CLIENT_ID=your_paypal_client_id
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 API Documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### PDF Management
+- `POST /api/pdf/upload` - Upload a new PDF
+- `GET /api/pdf/:id` - Retrieve PDF details
+- `DELETE /api/pdf/:id` - Delete a PDF
+- `PUT /api/pdf/:id/move` - Move PDF to different collection
 
-## Deploy on Vercel
+### AI Analysis
+- `POST /api/ai/analyze` - Analyze PDF content
+- `POST /api/ai/summarize` - Generate PDF summary
+- `POST /api/ai/query` - Query PDF content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔒 Security
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# AI-pdf-notes-app
-This is an app which can chat with the pdf uploaded 
->>>>>>> 3d41a25f937d392d74e853c4b4174433af69beca
+- Secure authentication with Clerk
+- File encryption at rest
+- HTTPS-only communication
+- Rate limiting on API routes
+- Input sanitization
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+
+## 👥 Team
+
+- Alok Ranjan - Lead Developer
+- [Add team members]
+
+## 📞 Support
+
+For support, email support@yourapp.com or join our Slack channel.
