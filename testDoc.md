@@ -1,4 +1,4 @@
-I've created a comprehensive test suite that covers the main features of your application. Here's what's included:
+I've created a comprehensive test suite that covers the main features of my application. Here's what's included:
 
 PDF Management Tests:
 
